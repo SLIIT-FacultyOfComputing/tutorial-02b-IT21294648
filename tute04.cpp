@@ -27,3 +27,25 @@ int main() {
   std::cout << std::endl;
   return 0;
 }
+
+//function definition
+long Factorial(int no)//this func outputs the factorial of a number
+{
+    long fac;
+
+    fac = 1;
+    for (int r=no; r >= 1; r--) {
+        fac = fac * r;
+    }
+	
+	return fac;//returning the factorial number 
+}
+
+long nCr(int n, int r)///this func outputs the value for the equation n!/r!(n-r)!
+{
+	long finalValue;
+	
+	finalValue= Factorial(n)/(Factorial(r)*(Factorial(n-r)));//calculating the answer through factorial function
+	
+	return finalValue;//returning answer
+}
